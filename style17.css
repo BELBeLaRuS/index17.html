@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+.animation .anim{
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 20px;
+    margin-top: 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.animation .anim:first-child{
+    grid-column-start: 2;
+}
+
+.animation .anim:nth-child(2){
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.animation .anim:nth-child(3){
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.animation .anim:last-child{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.kubiki {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 20px;
+    margin: 100px;
+
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: all 0.3s linear;
+    
+}
+
+.kubiki:hover{
+    transform: scale(1.2);
+}
+
+@keyframes grow{
+    0%{
+        background-color: yellow;
+    }
+
+    100%{
+        background-color: blue;
+    }
+}
+
